@@ -11,9 +11,9 @@
 
     {
         "dni": 2,
-        "nombre": "Laura",
-        "apellido": "Martinez",
-        "correo": "Laurart@gmail.com",
+        "nombre": "David",
+        "apellido": "Torres",
+        "correo": "Dtorres@gmail.com",
         "imagen": "foto.jpg"
     }
 ]

@@ -24,6 +24,10 @@ app.get("/api/aprendices", (req, res) => {
   })
 })
 
+//endpoint para crear aprendices
+app.post("/api/aprendices", (req,res)=>{
+  res.json({Mensaje: "Trabajando en el endpoint"})
+})
 
 app.listen(puerto, () => {
   console.log(`Servidor en funcionamiento en el puerto: http://localhost:${puerto}`);
