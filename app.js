@@ -7,6 +7,7 @@ const puerto = process.env.PUERTO || 3030;
 
 //uso de middwealer body_parse
 app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
 app.get("/", (_, res) => {
   res.send(`Hola, estoy aprendiendo express, ficha 3407181 ADSO en el sena`, );
@@ -91,6 +92,15 @@ app.post("/login", (req, res) => {
     });
   }
 });
+
+//endpoint para enviar datos formdataa
+app.post("/formulario", (req,res)=>{
+  const datosform = req.body
+  const miNombre = req.body.nombre
+  const miApellido = req.body.Apellido
+  const miCargo = req.body.cargo
+  res.status(200).json({mensaje: "Datos recibidos", nombre: miNombre, Apellido: miApellido, cargo: miCargo})
+})
 
 app.listen(3000, () => {
   console.log(`Servidor en funcionamiento en el puerto: http://localhost:3000`);
